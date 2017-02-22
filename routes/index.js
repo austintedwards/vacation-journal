@@ -19,6 +19,17 @@ router.get('/add', function (req,res,next){
   res.render('addedEntry');
 });
 
+router.get('/vacation/:id', function(req, res, next) {
+    let id = req.params.id;
+    knex('vacation')
+        .where('id', id)
+        .then(function(data) {
+            res.render('index', {
+                vacationData: data
+            });
+        });
+});
+
 router.post('/', function (req, res, next) {
   console.log('input',req.body);
   knex('vacation')

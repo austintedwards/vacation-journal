@@ -1,12 +1,12 @@
 <ul id="vacationList">
     {{#each vacationData}}
     <li class= "vacationRow">
-      <div class= "vacationCovers col s4">
-        <h2>{{location}}</h2>
+      <div class= "vacationCovers col s4" id = {{id}}>
+        <h2 class= "tooltipped" data-position="left" data-delay="50" data-tooltip="Click to view">{{location}}</h2>
         <h5>{{start_date}} to {{end_date}}</h5>
         <a href= {{map_link}} target="_blank"><img class = "gps" src="/images/map-icon.png" alt=""></a>
         <p>{{entry}}</p>
-        <img class= "vacationImage" src = {{image}}>
+        <img class= "vacationImage tooltipped" data-position="right" data-delay="50" data-tooltip="Click to edit" class= "vacationImage tooltipped" data-position="right" data-delay="50" data-tooltip="Click to edit" src = {{image}}>
       </div>
     <div class="authorItem col s8">
       </div>
