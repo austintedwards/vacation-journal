@@ -1,8 +1,28 @@
+@font-face {
+    font-family: 'beachFont';
+    src: url('/TheBeach.otf');
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+.title{
+  font-family: "beachFont";
+}
+
+.add{
+  font-size: 500%;
+}
+
+.vacationImage{
+  width:500px;
+}
+
+.gps{
+  width:20px;
 }

@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link rel="shortcut icon" href="/images/hammock.png" />
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <nav>
+      <div class="nav-wrapper teal accent-4">
+        <a href="/" class="brand-logo title">{{title}}</a>
+        <ul id="nav-mobile" class="right">
+          <li><a class = "add" href="/add"> + </a></li>
+        </ul>
+      </div>
+    </nav>
+
+
     {{{body}}}
   </body>
 </html>

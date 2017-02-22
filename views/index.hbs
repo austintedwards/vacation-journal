@@ -1,14 +1,14 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
 <ul id="vacationList">
     {{#each vacationData}}
     <li class= "vacationRow">
       <div class= "vacationCovers col s4">
+        <h2>{{location}}</h2>
+        <h5>{{start_date}} to {{end_date}}</h5>
+        <a href= {{map_link}} target="_blank"><img class = "gps" src="/images/map-icon.png" alt=""></a>
+        <p>{{entry}}</p>
         <img class= "vacationImage" src = {{image}}>
       </div>
     <div class="authorItem col s8">
-      <h5>{{location}}</h5>
-      <p>{{entry}}</p>
       </div>
       </li>
     {{/each}}
