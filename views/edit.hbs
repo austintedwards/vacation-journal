@@ -1,0 +1,49 @@
+<ul id="vacationList">
+    {{#each vacationData}}
+    <li class= "vacationRow">
+      <div class= "vacationCovers col s4" id = {{id}}>
+        <h2 class= "tooltipped" data-position="left" data-delay="50" data-tooltip="Click to view">{{location}}</h2>
+        <h5>{{start_date}} to {{end_date}}</h5>
+        <a href= {{map_link}} target="_blank"><img class = "gps" src="/images/map-icon.png" alt=""></a>
+        <p>{{entry}}</p>
+        <img class= "vacationImage tooltipped" data-position="right" data-delay="50" data-tooltip="Click to edit" class= "vacationImage tooltipped" data-position="right" data-delay="50" data-tooltip="Click to edit" src = {{image}}>
+      </div>
+    <div class="authorItem col s8">
+      </div>
+      </li>
+    {{/each}}
+  </ul>
+
+  <div class="row">
+    <div class="col s12">
+      <h3>Add Vacation Entry</h3>
+      <form action="/" method="post">
+        <div class="input-field">
+          <input type="text" id="location" name="location">
+          <label for="location">Vacation Location</label>
+        </div>
+        <div class="input-field">
+          <input type="date" id="start_date" name="start_date">
+          <label for="entry">Start Date</label>
+        </div>
+        <div class="input-field">
+          <input type="date" id="end_date" name="end_date">
+          <label for="end_date">End Date</label>
+        </div>
+        <div class="input-field">
+          <textarea type="textarea" id="entry" name="entry">
+          </textarea>
+          <label for="entry">Vacation Journal Entry</label>
+        </div>
+        <div class="input-field">
+          <input type="url" id="image" name="image">
+          <label for="image">Image Url</label>
+        </div>
+        <div class="input-field">
+          <input type="url" id="map_link" name="map_link">
+          <label for="map_link">Map Url</label>
+        </div>
+        <input type="submit" class="btn orange darken-3" value="Input Log">
+      </form>
+    </div>
+  </div>

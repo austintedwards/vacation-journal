@@ -30,6 +30,17 @@ router.get('/vacation/:id', function(req, res, next) {
         });
 });
 
+router.get('/vacation/:id/edit', function(req, res, next) {
+    let id = req.params.id;
+    knex('vacation')
+        .where('id', id)
+        .then(function(data) {
+            res.render('edit', {
+                vacationData: data
+            });
+        });
+});
+
 router.post('/', function (req, res, next) {
   console.log('input',req.body);
   knex('vacation')
