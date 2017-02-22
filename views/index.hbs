@@ -1,2 +1,15 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<ul id="vacationList">
+    {{#each vacationData}}
+    <li class= "vacationRow">
+      <div class= "vacationCovers col s4">
+        <img class= "vacationImage" src = {{image}}>
+      </div>
+    <div class="authorItem col s8">
+      <h5>{{location}}</h5>
+      <p>{{entry}}</p>
+      </div>
+      </li>
+    {{/each}}
+  </ul>
