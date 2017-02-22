@@ -25,6 +25,7 @@ router.get('/vacation/:id', function(req, res, next) {
         .where('id', id)
         .then(function(data) {
             res.render('index', {
+              title: 'Vacation Journal',
                 vacationData: data
             });
         });
@@ -36,15 +37,24 @@ router.get('/vacation/:id/edit', function(req, res, next) {
         .where('id', id)
         .then(function(data) {
             res.render('edit', {
+              title: 'Vacation Journal',
                 vacationData: data
             });
         });
 });
 
 router.post('/', function (req, res, next) {
-  console.log('input',req.body);
   knex('vacation')
   .insert(req.body)
+  .then(function () {
+    res.redirect('/');
+  });
+});
+
+router.post('/delete', function (req, res, next) {
+  knex('vacation')
+  .where('id',req.body.id)
+  .del()
   .then(function () {
     res.redirect('/');
   });

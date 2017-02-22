@@ -11,12 +11,18 @@
     <div class="authorItem col s8">
       </div>
       </li>
+      <div class="card-action">
+      <form action="/delete" method="post">
+        <input type="hidden" name="id" value="{{id}}">
+        <input class="btn amber darken-4 small" type="submit" name="name" value="Remove">
+      </form>
+    </div>
     {{/each}}
   </ul>
 
   <div class="row">
     <div class="col s12">
-      <h3>Add Vacation Entry</h3>
+      <h3>Edit Vacation Entry</h3>
       <form action="/" method="post">
         <div class="input-field">
           <input type="text" id="location" name="location">
@@ -43,7 +49,8 @@
           <input type="url" id="map_link" name="map_link">
           <label for="map_link">Map Url</label>
         </div>
-        <input type="submit" class="btn orange darken-3" value="Input Log">
+        <input type="submit" class="btn orange darken-3" value="Update Log">
       </form>
+      <br>
     </div>
   </div>
