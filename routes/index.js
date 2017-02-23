@@ -60,4 +60,17 @@ router.post('/delete', function (req, res, next) {
   });
 });
 
+router.post('/edit', (req, res, next) => {
+  let id = req.body.id;
+  let vaca = req.body;
+  knex('vacation')
+    .where("id",id)
+    .update({location: vaca.location})
+    .then(function () {
+      res.redirect('/');
+    });
+
+})
+
+
 module.exports = router;

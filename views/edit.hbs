@@ -22,7 +22,8 @@
     <div class="row">
         <div class="col s12">
             <h3>Edit Vacation Entry</h3>
-            <form action="/" method="post">
+            <form action="/edit" method="post">
+                <input type="hidden" name="id" value="{{id}}">
                 <label for="location">Vacation Location</label>
                 <input type="text" id="location" name="location" value= {{location}}>
                 <label for="entry">Start Date</label>
