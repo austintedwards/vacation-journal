@@ -7,6 +7,7 @@ var knex = require('../db/knex.js');
 
 router.get('/', function(req, res, next) {
     knex('vacation')
+        .orderBy('start_date', 'aesc')
         .then(function(data) {
             res.render('index', {
                 title: 'Vacation Journal',
