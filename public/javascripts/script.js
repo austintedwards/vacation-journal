@@ -6,7 +6,7 @@ $(function(){
     window.location = "/vacation/"+ $id;
   });
 
-  $('img').click(function(){
+  $('.vacationImage').click(function(){
     var $id = $(this).parent()[0].id;
     window.location = "/vacation/"+ $id+"/edit";
   });
