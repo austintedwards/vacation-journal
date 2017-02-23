@@ -66,7 +66,7 @@ router.post('/edit', (req, res, next) => {
   let vaca = req.body;
   knex('vacation')
     .where("id",id)
-    .update({location: vaca.location})
+    .update({location: vaca.location, start_date: vaca.start_date, end_date: vaca.end_date, entry: vaca.entry, map_link: vaca.map_link, image: vaca.image})
     .then(function () {
       res.redirect('/');
     });
